@@ -50,4 +50,15 @@ describe('RestaurantList', () => {
       expect(queryByTestId('loading-indicator')).toBeNull();
     });
   });
+
+  describe('when loading fails', () => {
+    beforeEach(() => {
+      renderWithProps({loadError: true});
+    });
+
+    it('displays the error message', () => {
+      const {queryByText} = context;
+      expect(queryByText('Restaurants could not be loaded.')).not.toBeNull();
+    });
+  });
 });
