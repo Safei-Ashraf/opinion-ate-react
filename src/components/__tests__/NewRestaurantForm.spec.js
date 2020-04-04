@@ -6,6 +6,7 @@ import {NewRestaurantForm} from '../NewRestaurantForm';
 
 describe('NewRestaurantForm', () => {
   const restaurantName = 'Sushi Place';
+  const requiredError = 'Name is required';
 
   let createRestaurant;
   let context;
@@ -13,6 +14,13 @@ describe('NewRestaurantForm', () => {
   beforeEach(() => {
     createRestaurant = jest.fn().mockName('createRestaurant');
     context = render(<NewRestaurantForm createRestaurant={createRestaurant} />);
+  });
+
+  describe('initially', () => {
+    it('does not display a validation error', () => {
+      const {queryByText} = context;
+      expect(queryByText(requiredError)).toBeNull();
+    });
   });
 
   describe('when filled in', () => {
@@ -53,7 +61,7 @@ describe('NewRestaurantForm', () => {
 
     it('displays a validation error', () => {
       const {queryByText} = context;
-      expect(queryByText('Name is required')).not.toBeNull();
+      expect(queryByText(requiredError)).not.toBeNull();
     });
   });
 });
