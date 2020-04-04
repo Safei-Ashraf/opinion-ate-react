@@ -127,6 +127,13 @@ describe('NewRestaurantForm', () => {
       const {queryByText} = context;
       expect(queryByText(serverError)).not.toBeNull();
     });
+
+    it('does not clear the name', () => {
+      const {getByPlaceholderText} = context;
+      expect(getByPlaceholderText('Add Restaurant').value).toEqual(
+        restaurantName,
+      );
+    });
   });
 
   describe('when retrying after a server error', () => {
@@ -134,11 +141,14 @@ describe('NewRestaurantForm', () => {
       createRestaurant.mockRejectedValueOnce().mockResolvedValueOnce();
 
       const {getByPlaceholderText, getByTestId} = context;
-      userEvent.type(getByPlaceholderText('Add Restaurant'), restaurantName);
-      await userEvent.click(getByTestId('new-restaurant-submit-button'));
+      await userEvent.type(
+        getByPlaceholderText('Add Restaurant'),
+        restaurantName,
+      );
+      userEvent.click(getByTestId('new-restaurant-submit-button'));
       await act(flushPromises);
 
-      await userEvent.click(getByTestId('new-restaurant-submit-button'));
+      userEvent.click(getByTestId('new-restaurant-submit-button'));
       return act(flushPromises);
     });
 
