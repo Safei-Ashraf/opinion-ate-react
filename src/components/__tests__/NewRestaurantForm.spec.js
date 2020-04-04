@@ -39,4 +39,21 @@ describe('NewRestaurantForm', () => {
       expect(getByPlaceholderText('Add Restaurant').value).toEqual('');
     });
   });
+
+  describe('when empty', () => {
+    beforeEach(async () => {
+      createRestaurant.mockResolvedValue();
+
+      const {getByPlaceholderText, getByTestId} = context;
+      await userEvent.type(getByPlaceholderText('Add Restaurant'), '');
+      userEvent.click(getByTestId('new-restaurant-submit-button'));
+
+      return act(flushPromises);
+    });
+
+    it('displays a validation error', () => {
+      const {queryByText} = context;
+      expect(queryByText('Name is required')).not.toBeNull();
+    });
+  });
 });
