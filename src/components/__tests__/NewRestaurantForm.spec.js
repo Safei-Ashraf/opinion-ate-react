@@ -68,6 +68,10 @@ describe('NewRestaurantForm', () => {
       const {queryByText} = context;
       expect(queryByText(requiredError)).not.toBeNull();
     });
+
+    it('does not call createRestaurant', () => {
+      expect(createRestaurant).not.toHaveBeenCalled();
+    });
   });
 
   describe('when correcting a validation error', () => {
