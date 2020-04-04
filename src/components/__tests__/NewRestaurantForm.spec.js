@@ -46,6 +46,11 @@ describe('NewRestaurantForm', () => {
       const {getByPlaceholderText} = context;
       expect(getByPlaceholderText('Add Restaurant').value).toEqual('');
     });
+
+    it('does not display a validation error', () => {
+      const {queryByText} = context;
+      expect(queryByText(requiredError)).toBeNull();
+    });
   });
 
   describe('when empty', () => {
