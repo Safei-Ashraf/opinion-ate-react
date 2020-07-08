@@ -24,7 +24,7 @@ export const RestaurantList = ({
       {loadError && (
         <Alert severity="error">Restaurants could not be loaded.</Alert>
       )}
-      <img src={nicCage} />
+      <img src={nicCage} alt="Nic Cage with long hair" />
       <List>
         {restaurants.map(restaurant => (
           <li key={restaurant.id}>
