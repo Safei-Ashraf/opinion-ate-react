@@ -27,9 +27,11 @@ const App = () => (
           <Typography variant="h6">Opinion Ate</Typography>
         </Toolbar>
       </AppBar>
-      <Container>
-        <RestaurantScreen />
-      </Container>
+      <main>
+        <Container>
+          <RestaurantScreen />
+        </Container>
+      </main>
     </ThemeProvider>
   </Provider>
 );
