@@ -8,7 +8,9 @@ import NewRestaurantForm from './NewRestaurantForm';
 const RestaurantScreen = () => (
   <Card>
     <CardContent>
-      <Typography variant="h5">Restaurants</Typography>
+      <Typography variant="h5" component="h1">
+        Restaurants
+      </Typography>
       <NewRestaurantForm />
       <RestaurantList />
     </CardContent>
