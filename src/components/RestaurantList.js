@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Alert from '@material-ui/lab/Alert';
 import {loadRestaurants} from '../store/restaurants/actions';
+import nicCage from './nic-cage.jpg';
 
 export const RestaurantList = ({
   loadRestaurants,
@@ -23,6 +24,7 @@ export const RestaurantList = ({
       {loadError && (
         <Alert severity="error">Restaurants could not be loaded.</Alert>
       )}
+      <img src={nicCage} />
       <List>
         {restaurants.map(restaurant => (
           <ListItem key={restaurant.id} button>
