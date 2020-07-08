@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {makeStyles} from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
 import Alert from '@material-ui/lab/Alert';
 import {createRestaurant} from '../store/restaurants/actions';
 
@@ -55,14 +56,14 @@ export const NewRestaurantForm = ({createRestaurant}) => {
           fullWidth
           variant="filled"
         />
-        <Button
+        <IconButton
           type="submit"
           variant="contained"
           color="primary"
           data-testid="new-restaurant-submit-button"
         >
-          Add
-        </Button>
+          <AddIcon />
+        </IconButton>
       </Box>
     </form>
   );
