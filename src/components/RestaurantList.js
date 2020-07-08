@@ -22,7 +22,9 @@ export const RestaurantList = ({
     <>
       {loading && <CircularProgress data-testid="loading-indicator" />}
       {loadError && (
-        <Alert severity="error">Restaurants could not be loaded.</Alert>
+        <Alert severity="error" aria-atomic="true">
+          Restaurants could not be loaded.
+        </Alert>
       )}
       <img src={nicCage} alt="Nic Cage with long hair" />
       <List>
