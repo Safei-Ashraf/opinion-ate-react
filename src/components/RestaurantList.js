@@ -23,6 +23,7 @@ export const RestaurantList = ({
       {loadError && (
         <Alert severity="error">Restaurants could not be loaded.</Alert>
       )}
+      <img src="foo.gif" />
       <List>
         {restaurants.map(restaurant => (
           <ListItem key={restaurant.id} button>
