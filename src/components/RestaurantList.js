@@ -25,7 +25,7 @@ export const RestaurantList = ({
       )}
       <List>
         {restaurants.map(restaurant => (
-          <ListItem key={restaurant.id}>
+          <ListItem key={restaurant.id} button>
             <ListItemText>{restaurant.name}</ListItemText>
           </ListItem>
         ))}
