@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import store from './store';
 import RestaurantScreen from './components/RestaurantScreen';
+import './app.css';
 
 const theme = createMuiTheme({
   palette: {
