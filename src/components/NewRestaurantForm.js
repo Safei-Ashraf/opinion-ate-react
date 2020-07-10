@@ -55,7 +55,7 @@ export const NewRestaurantForm = ({createRestaurant}) => {
           label="Add Restaurant"
           id="addRestaurantField"
           fullWidth
-          variant="filled"
+          variant="outlined"
         />
         <IconButton
           type="submit"
