@@ -52,7 +52,7 @@ export const NewRestaurantForm = ({createRestaurant}) => {
         <TextField
           value={name}
           onChange={e => setName(e.target.value)}
-          placeholder="Add Restaurant"
+          label="Add Restaurant"
           fullWidth
           variant="filled"
         />
