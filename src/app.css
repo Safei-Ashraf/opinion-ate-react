@@ -1,0 +1,6 @@
+/* see https://zellwk.com/blog/hide-content-accessibly/ */
+.hide-visually {
+  position: absolute !important;
+  opacity: 0;
+  pointer-events: none;
+}
