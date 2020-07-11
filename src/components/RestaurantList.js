@@ -26,14 +26,18 @@ export const RestaurantList = ({
       <img src="foo.gif" />
       <List>
         {restaurants.map(restaurant => (
-          <ListItem key={restaurant.id} button>
-            <ListItemText>{restaurant.name}</ListItemText>
-          </ListItem>
+          <li key={restaurant.id}>
+            <ListItemLink href="#">
+              <ListItemText>{restaurant.name}</ListItemText>
+            </ListItemLink>
+          </li>
         ))}
       </List>
     </>
   );
 };
+
+const ListItemLink = props => <ListItem button component="a" {...props} />;
 
 const mapStateToProps = state => ({
   restaurants: state.restaurants.records,
