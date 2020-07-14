@@ -52,7 +52,7 @@ export const NewRestaurantForm = ({createRestaurant}) => {
         <TextField
           value={name}
           onChange={e => setName(e.target.value)}
-          label="Add Restaurant"
+          label="New Restaurant Name"
           id="addRestaurantField"
           fullWidth
           variant="outlined"
@@ -61,7 +61,7 @@ export const NewRestaurantForm = ({createRestaurant}) => {
           type="submit"
           variant="contained"
           color="primary"
-          title="Add Restaurant"
+          title="Save Restaurant"
           data-testid="new-restaurant-submit-button"
         >
           <AddIcon />
