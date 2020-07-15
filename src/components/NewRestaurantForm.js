@@ -60,6 +60,7 @@ export const NewRestaurantForm = ({createRestaurant}) => {
           type="submit"
           variant="contained"
           color="primary"
+          title="Add Restaurant"
           data-testid="new-restaurant-submit-button"
         >
           <AddIcon />
