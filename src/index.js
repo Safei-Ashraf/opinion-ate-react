@@ -7,9 +7,4 @@ import App from './App';
 //   axe(React, ReactDOM, 1000);
 // }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+ReactDOM.render(<App />, document.getElementById('root'));
