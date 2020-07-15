@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const client = axios.create({
-  baseURL: 'https://api.outsidein.dev/3ry2eSiTVJn9Fc1G5X40xmdI6wPx7XMp',
+  baseURL: 'https://api.outsidein.dev/MtTKbtwHGxGqhif4UDlk0icYs3Fymc85',
 });
 
 const api = {
